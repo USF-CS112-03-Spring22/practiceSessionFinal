@@ -29,9 +29,14 @@ public class RecursionExamples {
      * @return
      */
     public static boolean find(int[] arr, int startIndex, int elem) {
-        // FILL IN CODE
-
-        return true; // edit
+        if (arr == null)
+            return false;
+        if (startIndex == arr.length)
+            return false;
+        if (arr[startIndex] == elem)
+            return true;
+        else
+            return find(arr, startIndex + 1, elem);
     }
 
     public static void main(String[] args) {
